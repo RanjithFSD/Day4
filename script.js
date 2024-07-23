@@ -1,6 +1,6 @@
 let myResume={
     "basics": {
-      "name": "Ranjith Kumar Kalimuth",
+      "name": "Ranjith Kumar Kalimuthu",
       "email": "kranjith868@gamil.com",
       "phone": 9043634270,
       "degree": "B.E",
@@ -51,3 +51,37 @@ let myResume={
     ]
   }
   console.log(myResume);
+
+  console.log("Using for loop:");
+  for (let key in myResume) {
+  console.log(`${key}: ${myResume[key]}`);
+}
+
+
+  console.log("\nUsing for...in loop:");
+  for (let key in myResume) {
+  if (myResume.hasOwnProperty(key)) {
+    console.log(`${key}: ${myResume[key]}`);
+  }
+}
+
+
+  console.log("\nUsing for...of loop:");
+  for (let value of Object.values(myResume)) {
+  console.log(value);
+}
+
+  console.log("\nUsing forEach loop for education:");
+  myResume.education.forEach((education) => {
+  console.log(education);
+});
+
+  console.log("\nUsing forEach loop for experience:");
+  myResume.work.forEach((work) => {
+  console.log(work);
+});
+
+  console.log("\nUsing forEach loop for skills:");
+  myResume.skills.forEach((skills) => {
+  console.log(skills);
+});
